@@ -1117,7 +1117,7 @@ mod tests {
                 SocketAddr::V6(..) => Domain::ipv6(),
             };
             let socket = t!(Socket::new(domain, Type::stream(), None))
-                .into_tcp_stream();
+                .unwrap().into_tcp_stream();
             t!(cp.add_socket(1, &l));
 
             let a = Overlapped::zero();

@@ -14,10 +14,10 @@ abstractions.
 """
 
 [dependencies]
-socket2 = "0.3"
+socket2 = {path = "../socket2-rs"}
 
 [dependencies.winapi]
-version = "0.3.3"
+path = "../winapi-rs"
 features = [
   "std",
   "fileapi",
@@ -34,4 +34,4 @@ features = [
 ]
 
 [dev-dependencies]
-rand = "0.4"
+rand = {path = "../rand"}
